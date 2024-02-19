@@ -394,28 +394,34 @@ img {
   gap: 0.6rem;
   margin-top: 1rem;
 }
-
+/* .experience__company{
+  border-left: 3px solid var(--second-color);
+} */
 .experience__tab-button {
   display: flex;
   background-color: transparent;
-  /* color: var(--second-color); */
   border: none;
+  border-left: 3px solid lightblue;
   padding: 0.6rem;
   text-align: start;
   font-size: var(--normal-font-size);
   font-family: var(--body-font);
   cursor: pointer;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out linear;
+  width: 10rem;
 }
 
 .experience__tab-button:hover {
-  color: var(--first-color); /* Use your secondary color */
+  color: var(--first-color); 
 }
 
 .experience__tab-button.active-tab {
   color: var(--first-color);
   border-left: 3px solid var(--first-color);
 }
+/* .experience__timeline{
+  color: var(--first-color);
+} */
 
 .experience__highlight {
   height: 0.3rem;
@@ -590,6 +596,11 @@ img {
   .contact__container {
     margin-bottom: 2rem;
     justify-items: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .experience__tab-button {
+    width: 5rem;
   }
 }
 @media screen and (min-width: 768px) {
