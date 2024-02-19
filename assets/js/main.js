@@ -35,13 +35,14 @@ const scrollActive = () => {
         ".nav__menu a[href*=" + sectionId + "]"
       );
 
-    if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
+    if (scrollDown >= sectionTop && scrollDown < sectionTop + sectionHeight) {
       sectionsClass.classList.add("active-link");
     } else {
       sectionsClass.classList.remove("active-link");
     }
   });
 };
+
 window.addEventListener("scroll", scrollActive);
 
 /*===== SCROLL REVEAL ANIMATION =====*/
@@ -59,10 +60,12 @@ sr.reveal(".home__img, .about__subtitle, .about__text, .skills__img", {
 });
 sr.reveal(".home__social-icon", { interval: 200 });
 sr.reveal(".skills__data, .work__img, .contact__input", { interval: 200 });
+sr.reveal(".contact__title, .contact__message, .contact__email-button", {
+  interval: 200,
+});
 
-// Query the darkModeToggle button using getElementById
+/*=======DARK MODE TOGGLER ======= */
 const darkModeToggle = document.getElementById("darkModeToggle");
-// Query the header element using querySelector
 const header = document.querySelector(".l-header");
 
 // Function to toggle dark mode on body and header
@@ -101,8 +104,22 @@ document.addEventListener("DOMContentLoaded", () => {
     if (isDarkMode) {
       toggle();
     }
-  }else{
+  } else {
     //Default mode -> dark
     toggle();
   }
+
+  /*==========EXPERIENCE ACTIVE TAB ============ */
+  const tabs = document.querySelectorAll(".experience__tab-button");
+    const panels = document.querySelectorAll(".experience__tab-panel");
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => {
+        tabs.forEach((t) => t.classList.remove("active-tab"));
+        panels.forEach((p) => p.classList.remove("fade-enter-done"));
+
+        tab.classList.add("active-tab");
+        panels[index].classList.add("fade-enter-done");
+      });
+    });
 });

@@ -25,8 +25,7 @@
             class="dark-mode-toggle pulse"
             title="Dark Mode Toggle"
           >
-            <i class="bx bxs-moon "></i>
-            <!-- <span class="badge"></span> -->
+            <i class="bx bxs-moon"></i>
           </button>
         </div>
 
@@ -40,6 +39,9 @@
             </li>
             <li class="nav__item">
               <a href="#skills" class="nav__link">Skills</a>
+            </li>
+            <li class="nav__item">
+              <a href="#experience" class="nav__link">Work Experience</a>
             </li>
             <li class="nav__item">
               <a href="#projects" class="nav__link">Projects</a>
@@ -148,10 +150,10 @@
           <div>
             <h2 class="skills__subtitle">Profesional Skills</h2>
             <p class="skills__text">
-              Enthusiastic and detail-oriented Computer Science graduate with a
-              strong foundation in Java, PHP, and web technologies. Experienced
-              in full-stack development and software engineering through
-              impactful internships.
+              Skilled and knowledgeable Computer Science graduate with expertise
+              in Java, PHP, and web technologies. Proven experience in
+              full-stack development and software engineering through successful
+              internships.
             </p>
             <div class="skills__data">
               <div class="skills__names">
@@ -220,24 +222,80 @@
           </div>
 
           <div>
-            <img src="assets/img/work3.jpg" alt="" class="skills__img" loading="lazy" />
+            <img
+              src="assets/img/work3.jpg"
+              alt=""
+              class="skills__img"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
 
-      <!--===== WORK =====-->
-      <section class="work section" id="projects">
+      <!--===== EXPERIENCE  =====-->
+      <section id="experience" class="experience section">
+        <h2 class="section-title">Experience</h2>
+        <h3 class="experience__subtitle bd-grid">Where I've Worked</h3>
+
+        <div class="experience__container bd-grid">
+          <div class="experience__tab-container">
+            <div>
+              <button id="tab-0" role="tab" tabindex="0" aria-selected="true" aria-controls="panel-0" class="experience__tab-button active-tab">
+                <span>PageUp</span>
+              </button>
+              <button id="tab-1" role="tab" tabindex="1" aria-selected="false" aria-controls="panel-1" class="experience__tab-button">
+                <span>Persistent Systems</span>
+              </button>
+            </div>
+      
+            <!-- Highlight indicator -->
+            <div class="experience__highlight"></div>
+          </div>
+
+            <div class="experience__tab-panels">
+                <!-- Add your job panels here -->
+                <div id="panel-0" role="tabpanel" tabindex="0" aria-labelledby="tab-0" aria-hidden="false" class="experience__tab-panel fade-enter-done">
+                    <h3><span>Software Developer Intern (Full-time)</span><span class="company">&nbsp;@&nbsp;<a href="https://www.pageupsoftware.com" class="inline-link" rel="noopener noreferrer" target="_blank">PageUp Software Services Pvt Ltd</a></span></h3>
+                    <p class="range">Jan 2023 - Dec 2023</p>
+                    <div>
+                        <p>Contributions to E-commerce Application: Played a pivotal role in building APIs for the frontend of an e-commerce application.</p>
+                        <ul>
+                            <li><p>Admin Panel Design and Implementation: Developed an intuitive admin panel for the backend, ensuring seamless platform management.</p></li>
+                            <!-- Add more responsibilities as needed -->
+                        </ul>
+                        <blockquote>
+                            <p>Additional details or achievements.</p>
+                        </blockquote>
+                    </div>
+                </div>
+
+                <div id="panel-1" role="tabpanel" tabindex="1" aria-labelledby="tab-1" aria-hidden="true" class="experience__tab-panel">
+                    <h3><span>Summer Intern</span><span class="company">&nbsp;@&nbsp;<a href="https://www.persistent.com" class="inline-link" rel="noopener noreferrer" target="_blank">Persistent Systems Ltd.</a></span></h3>
+                    <p class="range">Jun 2023 - Aug 2023</p>
+                    <div>
+                        <p>Knowledge Acquisition: Gained valuable knowledge in data structures, databases, Linux, and Java during the internship.</p>
+                        
+                    </div>
+                </div>
+                <!-- Add more panels as needed -->
+            </div>
+        </div>
+    </section>
+      
+
+      <!--===== Projects =====-->
+      <section class="project section" id="projects">
         <h2 class="section-title">Projects</h2>
 
-        <div class="work__container bd-grid">
+        <div class="project__container bd-grid">
           <a
             href="https://github.com/vikas020807/Blockchain_based_Real_Estate_System"
-            class="work__img"
+            class="project__img"
           >
             <img src="assets/img/blockstate.jpg" alt="" loading="lazy" />
             <span class="project_name">BlockState</span>
           </a>
-          <a href="https://github.com/vikas020807/Chillflix" class="work__img">
+          <a href="https://github.com/vikas020807/Chillflix" class="project__img">
             <img src="assets/img/chillflix.jpg" alt="" loading="lazy" />
             <span class="project_name">ChillFlix</span>
           </a>
@@ -249,18 +307,20 @@
         <h2 class="section-title">Contact</h2>
 
         <div class="contact__container bd-grid">
-          <form action="" class="contact__form">
-            <input type="text" placeholder="Name" class="contact__input" />
-            <input type="mail" placeholder="Email" class="contact__input" />
-            <textarea
-              name=""
-              id=""
-              cols="0"
-              rows="10"
-              class="contact__input"
-            ></textarea>
-            <input type="button" value="Send" class="contact__button button" />
-          </form>
+          <h2 class="contact__title">Get In Touch</h2>
+          <p class="contact__message">
+            I'm currently looking for Full-Time opportunities. My inbox is
+            always open for Open Source Projects, Freelance Projects, or if you
+            have a question. Feel free to reach out:
+          </p>
+          <a
+            class="contact__email-button"
+            href="mailto:singhvk0807@gmail.com"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Say Hello
+          </a>
         </div>
       </section>
     </main>
