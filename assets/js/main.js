@@ -64,7 +64,7 @@ sr.reveal(".contact__title, .contact__message, .contact__email-button", {
   interval: 200,
 });
 
-/*=======DARK MODE TOGGLER ======= */
+/*================== DARK MODE TOGGLER ================================== */
 const darkModeToggle = document.getElementById("darkModeToggle");
 const header = document.querySelector(".l-header");
 
@@ -109,17 +109,33 @@ document.addEventListener("DOMContentLoaded", () => {
     toggle();
   }
 
-  /*==========EXPERIENCE ACTIVE TAB ============ */
+  /*==========EXPERIENCE TAB SELECTED ACTIVE ============ */
   const tabs = document.querySelectorAll(".experience__tab-button");
-    const panels = document.querySelectorAll(".experience__tab-panel");
+  const panels = document.querySelectorAll(".experience__tab-panel");
 
-    tabs.forEach((tab, index) => {
-      tab.addEventListener("click", () => {
-        tabs.forEach((t) => t.classList.remove("active-tab"));
-        panels.forEach((p) => p.classList.remove("fade-enter-done"));
+  tabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => {
+      tabs.forEach((t) => t.classList.remove("active-tab"));
+      panels.forEach((p) => p.classList.remove("fade-enter-done"));
 
-        tab.classList.add("active-tab");
-        panels[index].classList.add("fade-enter-done");
-      });
+      tab.classList.add("active-tab");
+      panels[index].classList.add("fade-enter-done");
     });
+  });
+
+  /*========================== EMAIL COPY ================== */
+  const emailElement = document.querySelector(".footer__email");
+  const emailPopper = document.getElementById("popper-message");
+
+  emailElement.addEventListener("click", function () {
+    const eId = emailElement.textContent || emailElement.innerText;
+    navigator.clipboard.writeText(eId.trim());
+    // Show popper message
+    emailPopper.classList.add("show");
+
+    // Hide popper message after 3 seconds
+    setTimeout(() => {
+      emailPopper.classList.remove("show");
+    }, 3000);
+  });
 });

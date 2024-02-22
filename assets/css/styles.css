@@ -535,6 +535,16 @@ img {
   font-size: 2rem;
   margin-bottom: var(--mb-4);
 }
+.footer__email{
+  font-size: 0.8rem;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  font-family: var(--body-font);
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
 .footer__social {
   margin-bottom: var(--mb-4);
 }
@@ -546,6 +556,25 @@ img {
 .footer__copy {
   font-size: var(--smaller-font-size);
 }
+#popper-message {
+  /* display: none; */
+  position: fixed;
+  bottom: 1rem;
+  right: 2rem;
+  padding: 1rem;
+  background-color: var(--first-color);
+  color: #fff;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(100px); /* Start offscreen */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#popper-message.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 /* ===== MEDIA QUERIES=====*/
 @media screen and (max-width: 320px) {
