@@ -271,6 +271,9 @@ img {
 
 .home__blob-img {
   width: 360px;
+  height: 360px;	
+  object-fit: cover;
+  clip-path: circle(50% at center);
 }
 
 /*BUTTONS*/
